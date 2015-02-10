@@ -1,0 +1,25 @@
+var jQuery = function( selector, context ) {
+		return new jQuery.fn.init( selector, context );
+		};
+
+
+jQuery.fn= 
+	{
+		jquery: version,
+		constructor: jQuery,
+		selector: "",
+		length: 0,
+		show: function() {
+		return showHide( this, true ) },
+		hide : function () {
+		return showHide( this ) }
+	}
+
+init = jQuery.fn.init = function( selector, context ) {}
+
+
+
+init.prototype = jQuery.fn;
+
+
+return jQuery;
