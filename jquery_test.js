@@ -3,15 +3,62 @@
 	var support = {};
 	var hasOwn = class2type.hasOwnProperty;
 	var version = "sumenzz",
-	    jQuery = function( selector, context ) {
-		return jQuery;
-		};	
+	    rmsPrefix = /^-ms-/;
+	var jQuery = function( selector, context ) {
+		return new jQuery.fn.init( selector, context );
+		};
+
+	function showHide( elements, show ) {
+	var display, elem, hidden,
+		values = [],
+		index = 0,
+		length = elements.length;
+
+	for ( ; index < length; index++ ) {
+		elem = elements[ index ];
+		//alert(elem.style.display==="none"?"no":"yes");
+		if ( !elem.style ) {
+			continue;
+		}
+     
+	}
+	if (show)
+			{
+			  elem.style.display="";
+			  return elements;
+			 }
+		else 
+		    {
+		     elem.style.display="none";
+		     return elements;
+		     }
 	
-	jQuery.fn = jQuery.prototype = {
-				jquery : version,
-         		constructor : jQuery
-         		};
-	    
+	}
+	
+	jQuery.fn= 
+	{
+		jquery: version,
+		constructor: jQuery,
+		selector: "",
+		length: 0,
+		show: function() {
+		return showHide( this, true ) },
+		hide : function () {
+		return showHide( this ) },
+		
+		position: function() {
+		
+		if ( !this[ 0 ] ) {
+			  return;}
+			
+		var offsetParent, offset,
+		parentOffset = { top: 0, left: 0 },
+		elem = this[ 0 ];
+
+
+		}
+	}
+
 	    
 	var rootjQuery;
     var rquickExpr = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,
@@ -119,6 +166,7 @@
         
 		return jQuery.makeArray( selector, this );
 	};
+init.prototype = jQuery.fn;
 return jQuery;
 })();
 
