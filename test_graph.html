@@ -1,41 +1,60 @@
 <style>
 
-.chart_container {
-height : 30% ;
-width : 30% ;
-color : black;
-border : 2px solid;
+.wrapper {
+background-color : grey;
+height : 95%;
+width : 80%;
+left : 20%;
+position : relative;
+min-height : 200px;
+min-width : 200px;
 }
 
+.chart_container {
+background-color : orange;
+position : relative;
+border : 4px solid;
+border-color : white;
+width : 50%;
+height : 50%;
+left : 25%;
+top : 10%;
+
+}
 
 .bar div{
-  font: 10px sans-serif;
+  font:sans-serif;
+  font-size : 1em;
   background-color: steelblue;
   text-align: right;
-  padding: 3px;
-  margin: 1px;
+ 
+  margin: 1%;
   color : white;
-  position : relative;
-  top: 20;
-  }
+ }
 
-
+ .horizontal div{
+ height : 10%;
+ }
+  
+ 
 </style>
-<div class="chart_container bar">
-  <div style="width: 10% ;">4</div>
-  <div style="width: 20% ;" >8</div>
+ <div class = "wrapper">
+<div class="chart_container bar horizontal">
+  <div style="width: 10% ; height : 10%">4</div>
+  <div style="width: 20% ;">8</div>
   <div style="width: 35% ;">15</div>
   <div style="width: 40% ;">16</div>
   <div style="width: 50% ;">23</div>
   <div style="width: 95% ;">42</div>
 </div>
 <br/><br/>
-<div class="chart_container bar">
-  <div style="width: 10%">4</div>
-  <div style="width: 20%" >8</div>
-  <div style="width: 35%">15</div>
-  <div style="width: 40%">16</div>
-  <div style="width: 50%">23</div>
-  <div style="width: 95%">42</div>
+<!-- <div class="chart_container bar horizontal">
+  <div style="height: 10% ">4</div>
+  <div style="height: 20% ; left : 20" >8</div>
+  <div style="height: 35% ; left : 40">15</div>
+  <div style="height: 40% ; left : 60">16</div>
+  <div style="height: 50% ; left : 80">23</div>
+  <div style="height: 95% ; left : 100">42</div>
+</div> -->
 </div>
 
